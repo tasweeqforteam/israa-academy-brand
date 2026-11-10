@@ -1,0 +1,129 @@
+/* Israa Academy brand guideline site · tokens from the approved identity (Version 1 «سماء الإسراء») */
+:root{
+  --night:#1B2257;--blue:#2B3A9E;--gold:#E6A63C;--paper:#FBF6EC;--white:#FFFFFF;
+  --lilac:#CDBFF5;--mint:#A8DDC5;--sky:#A8D8EE;--peach:#FCE6DB;--coral:#F2A28A;--royal:#3A4BC4;
+  --line:#5A64AE;--soft:#EEE8DA;--ink:var(--night);
+  --star8:polygon(50% 0,64.6% 14.6%,85.4% 14.6%,85.4% 35.4%,100% 50%,85.4% 64.6%,85.4% 85.4%,64.6% 85.4%,50% 100%,35.4% 85.4%,14.6% 85.4%,14.6% 64.6%,0 50%,14.6% 35.4%,14.6% 14.6%,35.4% 14.6%);
+  --g:clamp(16px,4vw,64px);--rail:96px;
+}
+*{box-sizing:border-box;margin:0;padding:0;letter-spacing:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--night);font-family:"Noto Kufi Arabic",sans-serif;font-size:17px;line-height:1.9;direction:rtl;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+h1,h2,h3,.disp{font-family:"Fustat",sans-serif;font-weight:800;line-height:1.3;font-variant-ligatures:no-common-ligatures no-discretionary-ligatures}
+.m{display:inline-block;overflow:hidden;vertical-align:top;padding:.2em .05em .38em;margin:-.2em -.05em -.38em}
+.w{display:inline-block}
+.star{clip-path:var(--star8)}
+
+/* the page spine: «درب الآيات» — a dotted path with one station per chapter */
+#rail{position:fixed;top:0;right:0;width:var(--rail);height:100vh;z-index:20;pointer-events:none}
+#rail svg{position:absolute;inset:0;width:100%;height:100%}
+#rail .st{position:absolute;right:30px;width:36px;height:36px;margin-top:-18px;border-radius:50%;background:var(--paper);border:2px solid var(--night);color:var(--night);display:grid;place-items:center;font:800 15px/1 Fustat;pointer-events:auto;text-decoration:none;transition:background .3s,color .3s}
+#rail .st.on{background:var(--night);color:var(--paper)}
+body.dark-rail #rail .st{background:var(--night);border-color:var(--paper);color:var(--paper)}
+body.dark-rail #rail .st.on{background:var(--gold);border-color:var(--gold);color:var(--night)}
+@media (max-width:820px){:root{--rail:0px}#rail{display:none}}
+
+main{margin-right:var(--rail)}
+section{padding:clamp(72px,10vw,140px) var(--g);position:relative}
+.wrap{max-width:1160px;margin:0 auto}
+.eyebrow{font:500 15px/1.6 "Noto Kufi Arabic";color:var(--blue);margin-bottom:14px;display:flex;gap:12px;align-items:center}
+.eyebrow b{font:800 15px/1 Fustat;width:34px;height:34px;border-radius:50%;background:var(--night);color:var(--paper);display:grid;place-items:center}
+h2{font-size:clamp(34px,5.2vw,64px);margin-bottom:22px}
+h3{font-size:clamp(22px,2.4vw,28px);margin-bottom:10px}
+.lead{font:600 clamp(17px,1.6vw,21px)/1.8 "Noto Kufi Arabic";max-width:760px;margin-bottom:40px}
+p+p{margin-top:12px}
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--white);border-radius:24px;padding:28px;border:1px solid var(--soft)}
+.card.n{background:var(--night);color:var(--paper);border:0}
+.tag{display:inline-flex;align-items:center;height:34px;padding:0 16px;border-radius:17px;background:var(--soft);font:600 14px/1 "Noto Kufi Arabic"}
+.rule{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--soft)}
+.rule:first-child{border-top:0}
+.rule i{flex:none;width:18px;height:18px;margin-top:8px;background:var(--night);clip-path:var(--star8)}
+.card.n .rule{border-color:#2E3670}.card.n .rule i{background:var(--gold)}
+.num{font:800 1em/1 Fustat;direction:ltr;unicode-bidi:isolate;display:inline-block}
+
+/* hero */
+#hero{min-height:100vh;background:var(--night);color:var(--paper);display:grid;place-items:center;overflow:hidden;padding-top:40px;padding-bottom:0}
+#hero .stage{position:relative;width:min(520px,86vw,50vh);aspect-ratio:600/1000;margin-top:auto}
+#hero svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+#hero .logo{position:absolute;left:50%;top:44%;width:46%;transform:translate(-50%,-50%)}
+#hero .tagline{position:absolute;left:0;right:0;top:68%;text-align:center;color:var(--night);font-size:clamp(24px,4.4vw,40px)}
+#hero .intro{position:absolute;top:clamp(28px,6vh,64px);right:var(--g);left:var(--g);display:flex;justify-content:space-between;align-items:center;font:500 14px/1.6 "Noto Kufi Arabic";color:#C9CCE6}
+#hero .scroll{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font:500 13px/1 "Noto Kufi Arabic";color:#C9CCE6}
+
+/* colour */
+.sw{border-radius:22px;overflow:hidden;border:1px solid var(--soft);background:var(--white)}
+.sw .chip{height:150px;display:flex;align-items:flex-end;padding:16px;font:800 30px/1 Fustat}
+.sw .meta{padding:16px 18px;font-size:14px;line-height:1.7}
+.sw .meta b{font:800 18px/1.4 Fustat;display:block}
+.ratio{display:flex;height:64px;border-radius:18px;overflow:hidden;margin:8px 0 40px}
+.ratio div{display:grid;place-items:center;font:800 16px/1 Fustat}
+.pairs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+@media (max-width:900px){.pairs{grid-template-columns:repeat(2,1fr)}}
+.pair{border-radius:20px;height:170px;position:relative;overflow:hidden}
+.pair i{position:absolute;bottom:0;left:50%;width:44%;height:72%;transform:translateX(-50%);clip-path:path("M0,500 L0,140 C0,80 50,50 85,30 C92,24 97,12 100,0 C103,12 108,24 115,30 C150,50 200,80 200,140 L200,500Z")}
+.pair span{position:absolute;top:12px;right:14px;font:600 12px/1.4 "Noto Kufi Arabic"}
+
+/* type */
+.specimen{font-family:"Fustat";font-weight:800;font-size:clamp(64px,10vw,140px);line-height:1.2}
+.scale div{display:flex;gap:18px;align-items:baseline;padding:14px 0;border-top:1px solid var(--soft)}
+.scale small{flex:none;width:150px;font:500 13px/1.5 "Noto Kufi Arabic";color:var(--blue)}
+
+/* families */
+.fam{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:56px 0;border-top:1px solid var(--soft)}
+.fam:nth-child(even){grid-template-columns:1fr 1.1fr}
+.fam:nth-child(even) .demo{order:2}
+@media (max-width:820px){.fam,.fam:nth-child(even){grid-template-columns:1fr}.fam:nth-child(even) .demo{order:0}}
+.demo{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:var(--white)}
+.demo img{width:100%;height:100%;object-fit:cover}
+.demo svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* characters */
+.chars{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media (max-width:900px){.chars{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.chars{grid-template-columns:repeat(2,1fr)}}
+.ch{border-radius:22px;aspect-ratio:3/4;display:flex;align-items:flex-end;justify-content:center;padding:12px 10px 0;overflow:hidden}
+.ch img{width:100%;height:100%;object-fit:contain;object-position:bottom}
+
+/* photo */
+.photos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:820px){.photos{grid-template-columns:repeat(2,1fr)}}
+.photos img{border-radius:20px;aspect-ratio:3/4;object-fit:cover;width:100%}
+
+/* motion */
+.films{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media (max-width:820px){.films{grid-template-columns:1fr}}
+.films video{width:100%;border-radius:22px;aspect-ratio:9/16;object-fit:cover;background:var(--night)}
+.films h3{margin-top:14px}
+.curve{background:var(--night);border-radius:22px;padding:20px;color:var(--paper)}
+.curve svg{width:100%;height:120px}
+
+/* templates */
+.posts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media (max-width:820px){.posts{grid-template-columns:repeat(2,1fr)}}
+.posts img{border-radius:14px;aspect-ratio:4/5;object-fit:cover;width:100%}
+
+/* do / don't */
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:720px){.dd{grid-template-columns:1fr}}
+.dd .card h3{display:flex;gap:10px;align-items:center}
+.dd .no h3 i{width:26px;height:26px;border-radius:50%;background:var(--coral)}
+.dd .yes h3 i{width:26px;height:26px;border-radius:50%;background:var(--mint)}
+
+footer{background:var(--night);color:var(--paper);padding:80px var(--g) 64px;margin-right:var(--rail)}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+footer img{width:150px}
+
+[data-r]{opacity:0}
+@media (prefers-reduced-motion:reduce){[data-r]{opacity:1!important;transform:none!important}}
+
+/* round 2: carousel strip, guideline pages, download */
+.strip{width:100%;border-radius:20px;margin-top:24px;background:#fff}
+.gpages{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.gpages img{width:100%;border-radius:20px;border:1px solid var(--soft);background:#fff}
+@media (max-width:720px){.gpages{grid-template-columns:1fr}}
+.dl{display:inline-flex;align-items:center;height:56px;padding:0 28px;border-radius:28px;background:var(--gold);color:var(--night);font:600 16px/1 "Noto Kufi Arabic";text-decoration:none}
